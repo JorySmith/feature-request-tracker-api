@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
 })
 
 // Add a feature request
-app.post("/feature-request-tracker", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const { description } = req.body
     const newFeature = await pool.query(
