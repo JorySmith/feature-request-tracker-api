@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
 })
 
 // Create feature request
-app.post("/features", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
 
     const { description } = req.body
@@ -41,7 +41,7 @@ app.post("/features", async (req, res) => {
 
 // Get one feature request
 
-app.get("/features/:id", async (req, res) => {
+app.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const feature = await pool.query(
@@ -57,7 +57,7 @@ app.get("/features/:id", async (req, res) => {
 
 // Update one feature request
 
-app.put("/features/:id", async (req, res) => {
+app.put("/:id", async (req, res) => {
   try {
     const { id } = req.params
     const { description } = req.body
@@ -75,7 +75,7 @@ app.put("/features/:id", async (req, res) => {
 
 // Delete one feature request
 
-app.delete("/features/:id", async (req, res) => {
+app.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params
     const deleteFeature = await pool.query(
