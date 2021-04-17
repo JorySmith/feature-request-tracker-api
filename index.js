@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
 
 })
 
-// Create feature request
+// Add a feature request
 app.post("/", async (req, res) => {
   try {
 
@@ -40,7 +40,6 @@ app.post("/", async (req, res) => {
 })
 
 // Get one feature request
-
 app.get("/feature-request-tracker/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -56,7 +55,6 @@ app.get("/feature-request-tracker/:id", async (req, res) => {
 })
 
 // Update one feature request
-
 app.put("/feature-request-tracker/:id", async (req, res) => {
   try {
     const { id } = req.params
@@ -74,8 +72,7 @@ app.put("/feature-request-tracker/:id", async (req, res) => {
 })
 
 // Delete one feature request
-
-app.delete("/feature-request-tracker/:id", async (req, res) => {
+app.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params
     const deleteFeature = await pool.query(
