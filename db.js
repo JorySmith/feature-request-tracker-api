@@ -2,11 +2,10 @@ const Pool = require("pg").Pool
 // Enables postgres queries
 
 const pool = new Pool({
-  user: "postgres",
-  password: "",
-  host: "localhost",
-  port: 5432,
-  database: "duncanfeatures"
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
 
 //https://feature-request-tracker-api.herokuapp.com/
