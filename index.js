@@ -39,7 +39,7 @@ app.post("/", async (req, res) => {
 })
 
 // Get one feature request
-app.get("/feature-request-tracker/:id", async (req, res) => {
+app.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const feature = await pool.query(
@@ -54,7 +54,7 @@ app.get("/feature-request-tracker/:id", async (req, res) => {
 })
 
 // Update one feature request
-app.put("/feature-request-tracker/:id", async (req, res) => {
+app.put("/:id", async (req, res) => {
   try {
     const { id } = req.params
     const { description } = req.body
