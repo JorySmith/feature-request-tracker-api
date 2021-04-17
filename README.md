@@ -1,3 +1,3 @@
 # feature-request-tracker-api
 
-The RESTFUL API for the Feature Request Tracker located here: https://github.com/JorySmith/feature-request-tracker
+The Feature Request Tracker front-end React app is located here: https://github.com/JorySmith/feature-request-tracker
