@@ -1,9 +1,9 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-// const { Client } = require("pg")
 const pool = require("./db")
 
+//https://feature-request-tracker-api.herokuapp.com/
 
 // Middleware
 app.use(cors())

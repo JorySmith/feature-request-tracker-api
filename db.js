@@ -8,6 +8,4 @@ const pool = new Pool({
   }
 })
 
-//https://feature-request-tracker-api.herokuapp.com/
-
 module.exports = pool
