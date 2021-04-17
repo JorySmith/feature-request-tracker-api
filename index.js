@@ -89,6 +89,6 @@ app.delete("/features/:id", async (req, res) => {
   }
 })
 
-app.listen(5000, () => {
-  console.log("server started")
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server started on Port ${process.env.PORT} my man!`)
 })
