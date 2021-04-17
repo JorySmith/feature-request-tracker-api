@@ -13,10 +13,10 @@ app.use(express.json()) // enable req.body use, allows getting data from client 
 // Get all feature requests
 app.get("/", async (req, res) => {
   try {
-    res.send('The homepage is working!')
-    // const allFeatures = await pool.query(
-    //   "SELECT * FROM featurerequest")
-    // res.json(allFeatures.rows)
+    // res.send('The homepage is working!')
+    const allFeatures = await pool.query(
+      "SELECT * FROM featurerequest")
+    res.json(allFeatures.rows)
   } catch (error) {
     console.error(error.message)
   }
