@@ -11,7 +11,7 @@ app.use(express.json()) // enable req.body use, allows getting data from client 
 
 // Routes:
 // Get all feature requests
-app.get("/", async (req, res) => {
+app.get("/feature-request-tracker", async (req, res) => {
   try {
     // res.send('The homepage is working!')
     const allFeatures = await pool.query(
