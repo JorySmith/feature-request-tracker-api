@@ -41,7 +41,7 @@ app.post("/feature-request-tracker", async (req, res) => {
 
 // Get one feature request
 
-app.get("/:id", async (req, res) => {
+app.get("/feature-request-tracker/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const feature = await pool.query(
@@ -57,7 +57,7 @@ app.get("/:id", async (req, res) => {
 
 // Update one feature request
 
-app.put("/:id", async (req, res) => {
+app.put("/feature-request-tracker/:id", async (req, res) => {
   try {
     const { id } = req.params
     const { description } = req.body
@@ -75,7 +75,7 @@ app.put("/:id", async (req, res) => {
 
 // Delete one feature request
 
-app.delete("/:id", async (req, res) => {
+app.delete("/feature-request-tracker/:id", async (req, res) => {
   try {
     const { id } = req.params
     const deleteFeature = await pool.query(
